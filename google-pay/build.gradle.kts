@@ -26,7 +26,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.certified84"
             artifactId = "google-pay"
-            version = "0.0.1"
+            version = "0.0.4"
 
             afterEvaluate {
                 from(components["release"])
