@@ -29,7 +29,7 @@ afterEvaluate {
 
                 groupId = "com.github.certified84"
                 artifactId = "GooglePay"
-                version = "0.0.7"
+                version = "0.0.7.1"
             }
 
             debug(MavenPublication) {
@@ -37,7 +37,7 @@ afterEvaluate {
 
                 groupId = "com.github.certified84"
                 artifactId = "GooglePay"
-                version = "0.0.7"
+                version = "0.0.7.1"
             }
         }
         repositories {
