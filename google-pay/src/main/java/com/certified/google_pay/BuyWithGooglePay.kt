@@ -18,14 +18,19 @@ package com.certified.google_pay
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.os.Build
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.FontRes
+import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -75,9 +80,9 @@ class BuyWithGooglePay @JvmOverloads constructor(
         }
     }
 
-    fun setVisibility(visible: Boolean) {
-        visibility = if (visible) View.VISIBLE else View.GONE
-    }
+//    fun setVisibility(visible: Boolean) {
+//        visibility = if (visible) View.VISIBLE else View.GONE
+//    }
 
 
     //    Button Text
@@ -102,22 +107,22 @@ class BuyWithGooglePay @JvmOverloads constructor(
     }
 
     //    Text colors
-//    fun setTextColor(colorString: String) {
-//        binding.btnGooglePay.setTextColor(ColorStateList.valueOf(Color.parseColor(colorString)))
-//    }
-//
-//    fun setTextColor(colorStateList: ColorStateList) {
-//        binding.btnGooglePay.setTextColor(colorStateList)
-//    }
-//
-//    fun setTextColorInt(@ColorInt colorInt: Int) {
-//        binding.btnGooglePay.setTextColor(ColorStateList.valueOf(colorInt))
-//    }
+    fun setTextColor(colorString: String) {
+        binding.btnGooglePay.setTextColor(ColorStateList.valueOf(Color.parseColor(colorString)))
+    }
 
-//    @RequiresApi(Build.VERSION_CODES.M)
-//    fun setTextColor(@ColorRes colorRes: Int) {
-//        binding.btnGooglePay.setTextColor(resources.getColorStateList(colorRes, context.theme))
-//    }
+    fun setTextColor(colorStateList: ColorStateList) {
+        binding.btnGooglePay.setTextColor(colorStateList)
+    }
+
+    fun setTextColorInt(@ColorInt colorInt: Int) {
+        binding.btnGooglePay.setTextColor(ColorStateList.valueOf(colorInt))
+    }
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    fun setTextColor(@ColorRes colorRes: Int) {
+        binding.btnGooglePay.setTextColor(resources.getColorStateList(colorRes, context.theme))
+    }
 
     //    Text typeface
     fun setTypeface(@FontRes font: Int, @StyleRes style: Int) {
